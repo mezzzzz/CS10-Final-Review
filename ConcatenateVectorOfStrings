@@ -1,0 +1,23 @@
+#include <iostream>
+#include <string>
+#include <vector>
+
+using namespace std;
+
+string ConcatStrings (const vector < string > &input) {
+  string all = "";
+
+  for (unsigned int i = 0; i < input.size (); i++) {
+      all = all + input.at (i);
+    }
+
+  return all;
+}
+
+int main () {
+  vector < string > str {"hi", "my", "name", "is", "bob"};
+
+  cout << ConcatStrings (str) << endl;
+
+  return 0;
+}
