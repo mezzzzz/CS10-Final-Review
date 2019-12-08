@@ -1,0 +1,30 @@
+#include <iostream>
+#include <string>
+#include <vector>
+#include <cctype>
+
+using namespace std;
+
+int NumNonAlpha(vector<string> v) {
+    int counter = 0;
+    
+    for (unsigned int i = 0; i < v.size(); i++) {
+        for (unsigned int j = 0; j < v.at(i).size(); j++ ) {
+            if (!isalpha(v.at(i).at(j))) {
+                counter++;
+            }
+        }
+    }
+    
+    return counter;
+}
+
+int main () {
+    
+    vector<string> str {"hey6", "^you", "f$t"};
+    
+    cout << NumNonAlpha(str) << endl; 
+    
+    
+  return 0;
+}
