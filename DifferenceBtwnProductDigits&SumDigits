@@ -1,0 +1,31 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main () {
+    
+    int n;
+    int modVal;
+    int mult = 1;
+    int add = 0;
+    vector <int> digits;
+    
+    cin >> n; 
+    
+    modVal = n % 10;
+    while (n > 0) {
+        digits.push_back(modVal);
+        n = n / 10;
+        modVal = n % 10;
+    }
+    
+    for (unsigned int j = 0; j < digits.size(); j++) {
+        mult = mult * digits.at(j);
+        add = add + digits.at(j);
+    }
+    
+    cout << mult - add<< endl;
+  
+  return 0;
+}
